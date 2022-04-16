@@ -2,33 +2,94 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Run npm install
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## File Tree
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# public
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Images & what not go here
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# pages
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Learn more about next.js to understand this
 
-## Learn More
+# styles
 
-To learn more about Next.js, take a look at the following resources:
+Generally stores global styles - for now
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Components are where we store well, components.
+They are then imported into a parent page or a parent component.
 
-## Deploy on Vercel
+## Helpful Tools
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We take advantage of <style> tags within our components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Using the Styled JSX library
+
+To make this a much better dev experience, make sure to
+install these two vscode extensions:
+
+styled-jsx Language Server
+https://marketplace.visualstudio.com/items?itemName=Divlo.vscode-styled-jsx-languageserver
+
+styled-jsx Syntax Highlighting
+https://marketplace.visualstudio.com/items?itemName=Divlo.vscode-styled-jsx-syntax
+
+We also take advantage of code snippets to speed up dev and eliminate boilerplate
+in our normal workflow - you can download that here:
+
+## Code Snippets
+
+Code Snippets are very powerful in eliminating boilerplate and speeding up your
+workflows. I've put together a set of snippets I used with this workflow specifically
+that help me immensely.
+
+They are in a JSON document and are meant to be used with VS Code.
+
+You can find them here: https://github.com/TyrellD1/nextjs-react-snippets
+
+All you have to do is go to:
+
+Windows: file => preferences => user snippets
+Mac: Code => preferences => user snippets
+
+and search react. The jsx file extension should come up.
+
+Just paste what I have in the snippets.json file in here and
+you will be set to go.
+
+I encourage you to add to yours overtime as you see fit.
+
+## Styled JSX
+
+# Global SCSS Variables
+
+Put Global Variables in /styles/global-vars.scss
+
+Global Variables can be imported effortlessly using the snippets I linked to above
+
+# Scope
+
+Styles are scoped to the exact component they're defined it. 
+
+They are not passed onto sub components. 
+
+If you need to pass to sub components (this can come in handy) see
+https://nextjs.org/blog/styling-next-with-styled-jsx#one-off-global-selectors
+
+# Dynamic Styles
+
+There are ways to change your css styles on variables changes in next.js
+
+Here's 2 main ways. 
+
+1. Changes with props (not typically dynamic) this will allow you to make
+your components modular to add different styles easily.
+
+2. The truly dynamic way. This is when you need styles to change when
+the end user interacts with an element. You can do it the normal inline way
+or there's another way we'll see here. 
+
