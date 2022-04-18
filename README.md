@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Getting Started
 
 1. Navigate to root directory
 
@@ -8,19 +8,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 3. npm run dev
 
-# Happy Coding!
+## Happy Coding!
 
-## File Tree
+# File Tree
 
-# public
+## public
 
 Static files go here
 
-# pages
+## pages
 
 Learn more about next.js to understand this
 
-# styles
+## styles
 
 Generally stores global styles
 
@@ -36,12 +36,12 @@ you use the color or font and change it manually.
 
 This is essential for shipping front end code quickly.
 
-# components
+## components
 
 Components are where we store well, components.
 They are then imported into a parent page or a parent component.
 
-## Helpful Tools
+# Helpful Tools
 
 We take advantage of <style> tags within our components
 
@@ -56,7 +56,7 @@ https://marketplace.visualstudio.com/items?itemName=Divlo.vscode-styled-jsx-lang
 styled-jsx Syntax Highlighting
 https://marketplace.visualstudio.com/items?itemName=Divlo.vscode-styled-jsx-syntax
 
-## Code Snippets
+# Code Snippets
 
 Code Snippets are very powerful in eliminating boilerplate and speeding up your
 workflows. I've put together a set of snippets I've used with this workflow specifically
@@ -80,15 +80,15 @@ I encourage you to add to yours overtime as you see fit. I intend this to
 be an evergrowing list - should you make your own and want to share them
 let me know and we can consider adding them to the list!
 
-## Styled JSX
+# Styled JSX
 
-# Global SCSS Variables
+## Global SCSS Variables
 
 Put Global Variables in /styles/global-vars.scss
 
 Global Variables can be imported effortlessly using the snippets I linked to above
 
-# Scope
+## Scope
 
 Styles in style tags are scoped to the exact component they're defined it. 
 
@@ -98,7 +98,7 @@ If you need to pass to sub components (this can come in handy) see
 https://nextjs.org/blog/styling-next-with-styled-jsx#one-off-global-selectors
 don't worry about learning this otherwise.
 
-# Dynamic Styles
+## Dynamic Styles
 
 There are ways to change your css styles on variables changes in next.js
 
