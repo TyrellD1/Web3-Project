@@ -2,13 +2,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Run npm install
+1. Navigate to root directory
+
+2. Run npm install
+
+3. npm run dev
+
+# Happy Coding!
 
 ## File Tree
 
 # public
 
-Images & what not go here
+Static files go here
 
 # pages
 
@@ -16,7 +22,19 @@ Learn more about next.js to understand this
 
 # styles
 
-Generally stores global styles - for now
+Generally stores global styles
+
+Component styles can be found in a components directory.
+
+It is very important to use global vars for things like colors
+and fonts throughout the application.
+
+That way if you decide to change a color or font later you can
+change the global variable once and have every component change
+dynamically, rather than having to go into each individual place
+you use the color or font and change it manually.
+
+This is essential for shipping front end code quickly.
 
 # components
 
@@ -38,13 +56,10 @@ https://marketplace.visualstudio.com/items?itemName=Divlo.vscode-styled-jsx-lang
 styled-jsx Syntax Highlighting
 https://marketplace.visualstudio.com/items?itemName=Divlo.vscode-styled-jsx-syntax
 
-We also take advantage of code snippets to speed up dev and eliminate boilerplate
-in our normal workflow - you can download that here:
-
 ## Code Snippets
 
 Code Snippets are very powerful in eliminating boilerplate and speeding up your
-workflows. I've put together a set of snippets I used with this workflow specifically
+workflows. I've put together a set of snippets I've used with this workflow specifically
 that help me immensely.
 
 They are in a JSON document and are meant to be used with VS Code.
@@ -61,7 +76,9 @@ and search react. The jsx file extension should come up.
 Just paste what I have in the snippets.json file in here and
 you will be set to go.
 
-I encourage you to add to yours overtime as you see fit.
+I encourage you to add to yours overtime as you see fit. I intend this to
+be an evergrowing list - should you make your own and want to share them
+let me know and we can consider adding them to the list!
 
 ## Styled JSX
 
@@ -73,12 +90,13 @@ Global Variables can be imported effortlessly using the snippets I linked to abo
 
 # Scope
 
-Styles are scoped to the exact component they're defined it. 
+Styles in style tags are scoped to the exact component they're defined it. 
 
-They are not passed onto sub components. 
+They are not passed onto sub components or up to parent components. 
 
 If you need to pass to sub components (this can come in handy) see
 https://nextjs.org/blog/styling-next-with-styled-jsx#one-off-global-selectors
+don't worry about learning this otherwise.
 
 # Dynamic Styles
 
