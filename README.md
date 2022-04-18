@@ -18,11 +18,12 @@ Static files go here
 
 ## pages
 
-Learn more about next.js to understand this
+Not needed to start. Pages are basically parent componenents you store
+in the /pages directory. Ask for help here as needed.
 
 ## styles
 
-Generally stores global styles
+Generally stores global styles.
 
 Component styles can be found in a components directory.
 
@@ -41,11 +42,14 @@ This is essential for shipping front end code quickly.
 Components are where we store well, components.
 They are then imported into a parent page or a parent component.
 
+The beauty of React/Next.js is they help us create reusable
+components we can customize very easily.
+
 # Helpful Tools
 
-We take advantage of <style> tags within our components
+We take advantage of <style> tags within our components.
 
-Using the Styled JSX library
+Using the Styled JSX library.
 
 To make this a much better dev experience, make sure to
 install these two vscode extensions:
@@ -78,7 +82,7 @@ you will be set to go.
 
 I encourage you to add to yours overtime as you see fit. I intend this to
 be an evergrowing list - should you make your own and want to share them
-let me know and we can consider adding them to the list!
+let me know and we can think about adding them to the list!
 
 # Styled JSX
 
@@ -86,7 +90,7 @@ let me know and we can consider adding them to the list!
 
 Put Global Variables in /styles/global-vars.scss
 
-Global Variables can be imported effortlessly using the snippets I linked to above
+Global Variables can be imported effortlessly using the snippets I linked to above.
 
 ## Scope
 
@@ -100,7 +104,7 @@ don't worry about learning this otherwise.
 
 ## Dynamic Styles
 
-There are ways to change your css styles on variables changes in next.js
+There are ways to change your css styles on variables changes in next.js.
 
 Here's 2 main ways. 
 
