@@ -21,7 +21,7 @@ export default function CallToActionDivider(props) {
                         justify-content: center;
                         align-items: center;
 
-                        min-width: 100%;
+                        width: 100vw;
                     }
 
                     p {
@@ -42,6 +42,7 @@ export default function CallToActionDivider(props) {
                         background: #4A5CFF;
                     }
 
+
                 // All Devices Styles End
                 @include media-query-phone {
 
@@ -56,6 +57,12 @@ export default function CallToActionDivider(props) {
                     p {
                         width: 35%;
                         margin: 1.5rem;
+                    }
+
+                    button:hover {
+                        cursor: pointer;
+                        box-shadow: 0 2px 10px white;
+                        transform: translateY(-1px);
                     }
                 }
             `}</style>
