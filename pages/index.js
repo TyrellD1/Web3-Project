@@ -1,22 +1,11 @@
-import FunctionalComponent from "../components/FunctionalComponent.jsx";
+import CallToActionDivider from "../components/CallToActionDivider.jsx";
 
 export default function Home() {
   return (
-    <div className="test">  
-      <p>Test</p>
-      <FunctionalComponent />
+    <div>
+      <CallToActionDivider title="Lorem ipsum dolor sit amet, consectetur 
+        adipiscing elit, sed" btnText="Call To Action" />
       <style jsx>{`
-        p {
-          color: green;
-        }
-        .test {
-          p {
-            font-size: 45px;
-            color: red;
-            padding: 0;
-            margin: 0;
-          }
-        }
       `}</style>
     </div>
   )
