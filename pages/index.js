@@ -8,14 +8,15 @@ export default function Home() {
       <div className="nav-container">
         <NavBar />
       </div>
-      
-      <FunctionalComponent />
+      <div className="body-container">
+        <FunctionalComponent />
 
-      <h1 id="fourth-section">Team</h1>
-      
-      <div className="team-images">
-        <TeamMember imgSrc="/../public/stock.png" name="Tyrell" title='Lead Developer'/>
-        <TeamMember imgSrc="/../public/stock.png" name="Andrew" title='Developer'/>
+        <h1 id="fourth-section">Team</h1>
+
+        <div className="team-images">
+          <TeamMember imgSrc="/../public/stock.png" name="Tyrell" title='Lead Developer'/>
+          <TeamMember imgSrc="/../public/stock.png" name="Andrew" title='Developer'/>
+        </div>
       </div>
       
   
@@ -32,6 +33,9 @@ export default function Home() {
           .nav-container{
             position: relative;
             z-index: 2;
+          }
+          .body-container {
+            padding-top: 65px; // Accounts for nav-container height
           }
           .team-images{
             z-index: 1;

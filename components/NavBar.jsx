@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import IconClose from "./icons/mobileNavToggle/IconClose";
+import IconOpen from "./icons/mobileNavToggle/IconOpen";
 
 
 export default function NavBar() {
@@ -9,16 +11,21 @@ export default function NavBar() {
         <>
             <div className='nav-container'>                
                 <div className="nav-bar phone-only-flex">
-                    <button onClick={()=> setOpen(!open)}>=</button>
+                    <Image src="/../public/logo.png" alt="Web 3 Project Logo"
+                    width="120px" height="55px" layout="fixed" />
+                    <IconOpen onClick={()=>setOpen(true)} size="32px" additionalStyles={`
+                        position: absolute;
+                        right: 30px;
+                    `} />
                 </div>
                 {open?
                     <div className="open-nav-container phone-only-flex">
                         <div onClick={()=> setOpen(!open)} className="backdrop"></div>
                         <div className="open-nav-content-container">
-                            <Link  href="#first-section">
-                                <a onClick={()=> setOpen(!open)} className="open-nav-menu">Menu</a>
+                            <Link href="#">
+                                <a className="open-nav-menu title">Menu</a>
                             </Link>
-                            <p className="open-nav-menu-text">________________________</p>
+                            <hr/>
                             <div className="link-container"> 
                                 <Link href="#second-section">
                                     <a className="open-nav-menu-text">About</a>
@@ -39,11 +46,6 @@ export default function NavBar() {
                         </div>
                     </div>
                 :null}
-
-
-
-                <div className="desktop-only-flex nav-bar">
-                </div>
                     <div className="open-nav-container desktop-only-flex">
                         <div className="open-nav-content-container">
                             <div className="open-nav-menu">
@@ -65,7 +67,7 @@ export default function NavBar() {
                     </div>
 
             </div>
-            <style jsx>{`
+            <style jsx global>{`
                 @import 'styles/global-vars';
                 @import 'styles/media-queries';
                 // All Devices Styles Start
@@ -77,7 +79,23 @@ export default function NavBar() {
                     }
                 // All Devices Styles End
                 @include media-query-phone {
-                    
+                    .nav-container {
+                        width: 100vw;
+                        top: 0;
+                        position: fixed;
+                    }
+                    .nav-bar {
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: #e8e8e8;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        position: relative;
+                        height: 65px;
+                        .phone-img {
+                            height: 30px;
+                        }
+                    }
                     .open-nav-container {
                         position: fixed;
                         top: 0;
@@ -97,34 +115,47 @@ export default function NavBar() {
                             z-index: 2;
                             right: 0;
                             height: 100%;
-                            width: 250px;
+                            width: 77vw;
                             background-color: #ffffff;
-                            
+                            padding-top: 60px;
+                            padding-left: 35px;
+                            padding-right: 35px;
+                            hr {
+                                border-color: #000000;
+                                padding: 0;
+                                margin-top: 5px;
+                                margin-bottom: 12px;
+                                border-top: 0;
+                                border-left: 0;
+                                border-right: 0;
+                                border-bottom: 1.5spx solid #000;
+                            }
                             .link-container{
                                 display: flex;
                                 flex-direction: column;
                                 
                             }
                         }
-                        .open-nav-menu{
-                                padding-left: 20px;
-                                color: black;
-                                font-family: 'Inter';
-                                font-style: normal;
-                                font-weight: 700;
-                                font-size: 17px;
-                                line-height: 21px;
+                        .open-nav-menu {
+                            color: black;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 17px;
+                            line-height: 21px;
+                            &.title {
+                                margin-top: 40px;
                             }
+                        }
                         
                             .open-nav-menu-text{
-                                padding-left: 20px;
-                                color: #808080;
+                                color: #b3b2b2;
                                 font-family: 'Inter';
                                 font-style: normal;
                                 font-weight: 700;
                                 font-size: 17px;
                                 line-height: 21px;
-                                margin-top: 20px;
+                                margin-top: 8px;
                                 &:nth-of-type(1){
                                     margin-top: 0px;
                                 }
